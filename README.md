@@ -6,12 +6,12 @@ It will use React, Node.js, MySQL, and a map, weather and currency exchange API.
 
 #### See diagrams:
 a. User flow diagram 
-![User Flow Diagram](/readme/userflow)<br>
+![User Flow Diagram](/readme/userflow.png)<br>
 b. Database schema 
-![Database Schema](/readme/database)<br>
+![Database Schema](/readme/database.png)<br>
 c. API routes plan [here](https://docs.google.com/document/d/1plGu1vT-Kkuqh5ah00hocxkKw2FdfHx9A2RVc7BiUuc/edit)<br>
 d. Full-stack architecture drawing 
-![Full-stack architecture drawing](/readme/architecture)<br>
+![Full-stack architecture drawing](/readme/architecture.png)<br>
 
 These should assume that someone else who doesn’t know about your app should follow your instructions 
 Tell them how to create a table with no entries 
