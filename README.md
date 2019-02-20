@@ -13,19 +13,15 @@ c. API routes plan [here](https://docs.google.com/document/d/1plGu1vT-Kkuqh5ah00
 d. Full-stack architecture drawing 
 ![Full-stack architecture drawing](/readme/architecture.png)<br>
 
-These should assume that someone else who doesn’t know about your app should follow your instructions 
-Tell them how to create a table with no entries 
-IN DB.js  to do or assessment…. 
-
-####To begin this project: 
+#### To begin this project: 
 1. Clone repo <br>
 2. Run yarn install in both api and client folders <br>
 3. Run MySQL …. 
-4. Create the following database, tables and columns: <br>
-    **list queries to create DB and tables** <br>
-4. Create ".env" folder with DB password <br>
+4. Create "huayu" database and tables based on the database schema diagram. <br>
+5. Complete tables "schools" and "cities". <br>
+6. Create ".env" folder with DB password <br>
     DB_PASS=[yourpassword] <br>
-5. Run yarn start in parent folder <br>
+7. Run yarn start in parent folder <br>
 
 #### Future features will include:
 - Sort schools by location and population
