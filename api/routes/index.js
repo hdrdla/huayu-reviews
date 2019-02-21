@@ -33,7 +33,6 @@ router.get('/api/v1/schools/:id', (req, res, next) => {
     })
 });
 
-
 router.get('/api/v1/schools/:id/reviews', (req, res, next) => {
   db('SELECT * FROM reviews WHERE school_id =' +`${req.params.id}`)
     .then(results => {
