@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './School.css';
-
-const KEY = "7a0d513132cd8c781cca0a8440eb61bb";
 const URL = "https://api.openweathermap.org/data/2.5";
+const KEY = "7a0d513132cd8c781cca0a8440eb61bb";
+
 
 class School extends Component {
     constructor(props) {
@@ -15,16 +15,46 @@ class School extends Component {
         likes_input: "",
         dislikes_input: "",
         cityimp_input: "",
-        overimp_input: ""
+        overimp_input: "",
+        school: "",
+        weather: null,
+        location: ""
       }
     } 
 
     componentDidMount() {
-      console.log('oy')
-    }
+      this.setState ({
+        school: this.props.school,
+      });
+
+     }
 
     componentWillReceiveProps() {
       console.log('asdf')
+    }
+
+    getWeather() {
+      console.log("weathersuccess")
+      this.setState({
+      });
+      let url = `${URL}/weather?q=${this.state.school.city}&APPID=${KEY}`;
+      fetch (url)
+      .then(response => {
+        if (!response.ok) {
+          throw Error(response.statusText);
+        }
+        return response.json();
+      })
+      .then(json => {
+        console.log(json);
+        this.setState({
+          weather: (json.main.temp - 273.15).toFixed(0) +"℃, " + json.weather[0].main,
+
+        });
+      })
+      .catch(error => {
+          console.log(error);
+      })
     }
 
   /*
@@ -109,19 +139,23 @@ class School extends Component {
       <div id="School">
         <header className="School-header">
             Individual school page
-            
         </header>
 
           <button onClick={this.props.backToList}> Back to all schools</button>   
+          
           <div className="map">
-            <img src = '${   }'></img>
+          <iframe src= {this.state.school.map} ></iframe>
           </div>
           <div className="school-info">
-            <h2>   </h2>
-            <h4>   </h4>
-
-
+            <h2>{this.state.school.university}</h2>
+            <h4>{this.state.school.center}</h4>
+            <h3>{this.state.school.city}</h3>
           </div>
+          <div className="weather">
+            <p onLoad={() => this.getWeather()}>The current weather in {this.state.school.city} is: {this.state.weather}.</p>
+            <button onClick={() => this.getWeather()}>go!</button>
+          </div>
+
 
 
       </div>
@@ -130,3 +164,10 @@ class School extends Component {
 }
 
 export default School;
+
+
+{/*
+
+
+        
+*/}

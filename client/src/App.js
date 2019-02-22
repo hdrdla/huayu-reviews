@@ -7,7 +7,8 @@ class App extends Component {
       super(props);
       this.state = { 
         appView: true,
-        schools: [] 
+        schools: [],
+        selectedSchoolIndex: "" 
       };
   }
 
@@ -30,10 +31,10 @@ class App extends Component {
   }
 
   changeView(i) {
-    console.log(i);
     if (this.state.appView === true) { 
       this.setState ({
-        appView: false
+        appView: false,
+        selectedSchoolIndex: i 
       });
     } else {
         this.setState ({
@@ -45,7 +46,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <div>
   {/*}
           <header className="hero-image">
@@ -98,17 +98,19 @@ class App extends Component {
 
   </div>
 
-          <div id = "gallery" className = {this.state.appView ? null : "hidden"}>
-            {this.state.schools.map((obj, i) => 
-              <div key={i}>
-                <div className = "UniName" onClick={() => this.changeView(i) }>{obj['university']}</div>
-                {obj['center']}  
-              </div>     
-            )}  
-          </div>
-
-          <div id="specificschool" className = {this.state.appView ? "hidden" : null}>
-            <School backToList={() => this.changeView()}/>
+          <div id="specificschool">
+            {this.state.appView ? 
+              <div id = "gallery">
+              {this.state.schools.map((obj, i) => 
+                <div key={i}>
+                  <div className = "UniName" onClick={() => this.changeView(i) }>{obj.university}</div>
+                  {obj.center}    
+                </div>     
+              )}  
+            </div>
+              : 
+              <School backToList={() => this.changeView()} school={this.state.schools[this.state.selectedSchoolIndex]}/>
+          }
           </div>  
 
           {/*<div id="fullmap">
