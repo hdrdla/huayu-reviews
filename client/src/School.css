@@ -1,3 +1,48 @@
-.hidden {
-    display: none;
-  }
+#School {
+  width: 80vw;
+}
+
+
+.map {
+  float: right;
+  margin: 40px;
+  border: 0;
+}
+
+
+.back {
+  float: left;
+  margin: 10px;
+}
+.school-info {
+  margin: 20px;
+  float:left;
+  line-height: 0.5em;
+}
+
+
+.small {
+  font-size: .7rem;
+}
+
+.reviewform {
+  max-width: 700px;
+  padding: 20px 12px 10px 20px;
+  font: 13px
+}
+
+.formheading{
+font-weight: bold;
+font-style: italic;
+border-bottom: 2px solid #ddd;
+margin-bottom: 20px;
+font-size: 15px;
+padding-bottom: 3px;
+}
+
+#reviews {
+  display: inline-block;
+ margin: 40px;
+ text-align: left;
+ line-height: 0.5em;
+}

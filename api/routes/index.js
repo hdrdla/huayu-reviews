@@ -44,6 +44,17 @@ router.get('/api/v1/schools/:id/reviews', (req, res, next) => {
     })
 });
 
+router.get('/api/v1/reviews', (req, res, next) => {   //  /schools/reviews will not work because it confuses it with schools/:id... things reviews is the ID 
+  db('SELECT * FROM reviews ORDER BY id ASC;')
+    .then(results => {
+      if (results.error) {
+        res.status(500).send(results.error);
+      }
+      console.log('results: ' + JSON.stringify(results.data));
+      res.send(results.data);
+    })
+});
+
 router.post('/api/v1/schools/reviews', (req, res, next) => {
   db(`INSERT INTO reviews (user_id, school_id, title, start_date, 
     end_date, likes, dislikes, city_impression, general_review) VALUES (${req.body.user_id}, ${req.body.school_id}, '${req.body.title}', '${req.body.start_date}', '${req.body.end_date}', '${req.body.likes}', '${req.body.dislikes}', '${req.body.city_impression}', '${req.body.general_review}')`)
