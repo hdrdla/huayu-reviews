@@ -33,15 +33,15 @@ HUAYU Reviews is built using React, Express, Node.js, MySQL and Bootstrap.
 ## PLAN
   ### User Flow
   
-   ![Image of userFlow](readme/userFlow.png)
+   ![Image of userFlow](readme/userflow.png)
   
   ### Database schema
   
-   ![Image of Database](readme/Database.png)
+   ![Image of Database](readme/database.png)
 
   ### API routes
   
-   ![API Routes](https://docs.google.com/document/d/1plGu1vT-Kkuqh5ah00hocxkKw2FdfHx9A2RVc7BiUuc/edit)
+   [API Routes](https://docs.google.com/document/d/1plGu1vT-Kkuqh5ah00hocxkKw2FdfHx9A2RVc7BiUuc/edit)
   
   ### Full stack architecture
   
@@ -68,16 +68,6 @@ Run `yarn install` to install dependencies in both client and api folders.
 
 ### Begin
 Run `yarn start` in the parent folder in your terminal.
-
-
-#### To begin this project: 
-
-4. Create "huayu" database and tables based on the database schema diagram. <br>
-5. Pop <br>
-
-
-
-
 
 
 _This is a student project that was created at [Codely](http://codely.tech), a full stack development bootcamp in Barcelona._
