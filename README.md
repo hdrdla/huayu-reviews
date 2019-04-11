@@ -13,13 +13,13 @@ HUAYU Reviews ia an app to review universities related to the HUAYU enrichment s
   - View and submit reviews of school experience
   
 ### Future Features
-    - User login
-    - Users can add photos, edit and delete their review
-    - Users can reply to others
-    - Search by school name
-    - Forum for discussion 
-    - Most recent reviews on homepage
-    - Blog posts
+- User login
+- Users can add photos, edit and delete their review
+- Users can reply to others
+- Search by school name
+- Forum for discussion 
+- Most recent reviews on homepage
+- Blog posts
 
 
 ## STACK
