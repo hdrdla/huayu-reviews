@@ -54,7 +54,7 @@ HUAYU Reviews is built using React, Express, Node.js, MySQL and Bootstrap.
 Run `yarn install` to install dependencies in both client and api folders.
 
 ### Database Preparation
-- Create `.env` file in the api directory and add `DB_PASS=YOURPASSWORD` and `DB_NAME=myFridge`.
+- Create `.env` file in the api directory and add `DB_PASS=YOURPASSWORD` and `DB_NAME=huayu`.
 
 - Copy `mysql -u root -p -e "create database huayu"` into your terminal to create a database in MySQL.
 
